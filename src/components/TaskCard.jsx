@@ -1,4 +1,10 @@
-function TaskCard({ task, theme }) {
+import { useTheme } from "../contexts/ThemeContext";
+import { useTask } from "../contexts/TaskContext";
+
+function TaskCard({ task }) {
+  const { theme } = useTheme();
+  const { deleteTask } = useTask();
+
   return (
     <div className={`task-card ${theme}`}>
       <h2>{task.title}</h2>
@@ -20,6 +26,10 @@ function TaskCard({ task, theme }) {
           </span>
         </div>
       </div>
+
+      <button className="delete-button" onClick={() => deleteTask(task.id)}>
+        削除
+      </button>
     </div>
   );
 }

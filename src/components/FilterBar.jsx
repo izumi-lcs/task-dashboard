@@ -1,6 +1,9 @@
 import FilterButton from "./FilterButton";
+import { useTask } from "../contexts/TaskContext";
 
-function FilterBar({ filter, setFilter }) {
+function FilterBar() {
+  const { filter, setFilter } = useTask();
+
   const filters = ["すべて", "未着手", "進行中", "完了"];
 
   return (

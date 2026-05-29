@@ -2,10 +2,17 @@
   box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
   margin: 0;
+}
+
+body {
   font-family: "Arial", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-  background-color: #bfbfbf;
+  background-color: #ffffff;
 }
 
 button {
@@ -13,9 +20,8 @@ button {
 }
 
 .app {
-  width: 968px;
-  min-height: 645px;
-  margin: 22px auto;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   background-color: #ffffff;
   color: #111111;
@@ -28,36 +34,38 @@ button {
 
 /* サイドバー */
 .sidebar {
-  width: 145px;
+  width: 220px;
+  min-height: 100vh;
   padding-top: 100px;
   background-color: #ffffff;
+  border-right: 1px solid #eeeeee;
 }
 
 .app.dark .sidebar {
   background-color: #111827;
+  border-right: 1px solid #374151;
 }
 
 .sidebar ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0 20px;
 }
 
 .sidebar li {
-  height: 44px;
-  padding-left: 32px;
-  display: flex;
-  align-items: center;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  border-radius: 10px;
   font-size: 15px;
-  color: #111111;
-}
-
-.app.dark .sidebar li {
-  color: #e5e7eb;
+  cursor: pointer;
 }
 
 .sidebar li.active {
   background-color: #cfe7ff;
+}
+
+.app.dark .sidebar li.active {
+  background-color: #1e3a5f;
 }
 
 /* メイン */
@@ -160,7 +168,8 @@ button {
 
 /* カード */
 .task-card {
-  height: 175px;
+  position: relative;
+  height: 205px;
   padding-top: 26px;
   border: 2px solid #0095ff;
   border-radius: 12px;
@@ -243,4 +252,22 @@ button {
 
 .status-完了 {
   background-color: #22b455;
+}
+
+/* 削除ボタン */
+.delete-button {
+  width: 80px;
+  height: 28px;
+  display: block;
+  margin: 10px auto 0;
+  border: none;
+  border-radius: 999px;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  opacity: 0.8;
 }
