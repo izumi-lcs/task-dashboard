@@ -168,9 +168,9 @@ button {
 
 /* カード */
 .task-card {
-  position: relative;
-  height: 205px;
+  height: 235px;
   padding-top: 26px;
+  padding-bottom: 16px;
   border: 2px solid #0095ff;
   border-radius: 12px;
   background-color: #ffffff;
@@ -256,10 +256,10 @@ button {
 
 /* 削除ボタン */
 .delete-button {
-  width: 80px;
-  height: 28px;
+  width: 90px;
+  height: 30px;
   display: block;
-  margin: 10px auto 0;
+  margin: 12px auto 0;
   border: none;
   border-radius: 999px;
   background-color: #ef4444;
